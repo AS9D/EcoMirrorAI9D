@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoMirror AI – Smart Living Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+    <h1>🌱 EcoMirror AI</h1>
+    <p>Your daily habits, reflected smarter.</p>
+</header>
+
+<!-- ===== INTRO SECTION ===== -->
+<section id="intro">
+    <h2>What is EcoMirror AI?</h2>
+    <p>
+        EcoMirror AI is a simple sustainability advisor that uses
+        rule-based If–Then logic to analyze daily habits and suggest
+        eco-friendly actions.
+    </p>
+    <p>
+        Our goal is to make learning about sustainability fun and interactive.
+        From water usage to energy-saving habits, EcoMirror AI helps you reflect
+        on your daily actions and see the impact you can make for the planet.
+    </p>
+
+    <div class="topic-images">
+        <div class="topic-card">
+            <img src="https://images.unsplash.com/photo-1589923188900-0c4b3b70a6f7?fit=crop&w=200&q=80" alt="Water">
+            <p>💧 Water</p>
+        </div>
+        <div class="topic-card">
+            <img src="https://images.unsplash.com/photo-1592928305113-bb7cdb69b0c1?fit=crop&w=200&q=80" alt="Energy">
+            <p>💡 Energy</p>
+        </div>
+        <div class="topic-card">
+            <img src="https://images.unsplash.com/photo-1524594157360-73e3f19a3e95?fit=crop&w=200&q=80" alt="Environment">
+            <p>🌍 Environment</p>
+        </div>
+        <div class="topic-card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=200&q=80" alt="Sustainable Lifestyle">
+            <p>🌿 Sustainable Living</p>
+        </div>
+        <div class="topic-card">
+            <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?fit=crop&w=200&q=80" alt="Solar Energy">
+            <p>☀️ Solar Energy</p>
+        </div>
+        <div class="topic-card">
+            <img src="https://images.unsplash.com/photo-1574694575782-6898980171d5?fit=crop&w=200&q=80" alt="Recycling">
+            <p>♻️ Recycling</p>
+        </div>
+        <div class="topic-card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=200&q=80" alt="Gardening">
+            <p>🌱 Gardening</p>
+        </div>
+        <div class="topic-card">
+            <img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe?fit=crop&w=200&q=80" alt="Public Transport">
+            <p>🚌 Public Transport</p>
+        </div>
+        <div class="topic-card">
+            <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?fit=crop&w=200&q=80" alt="Composting">
+            <p>🧹 Composting</p>
+        </div>
+        <div class="topic-card">
+            <img src="https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1?fit=crop&w=200&q=80" alt="Clean Environment">
+            <p>🏞 Clean Environment</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== MENU BUTTONS ===== -->
+<section id="menu">
+    <button onclick="showSection('quiz')">🧠 Take Quiz</button>
+    <button onclick="showSection('learn')">📘 Click to Learn</button>
+    <button onclick="showSection('ideas')">💡 Ideas to Promote</button>
+    <button onclick="showSection('goals')">🎯 Goals</button>
+</section>
+
+<!-- ===== QUIZ SECTION ===== -->
+<div id="quizContainer" style="display:none;">
+    <section id="quiz">
+        <h2>🧠 Sustainability Quiz</h2>
+        <!-- 25 questions covering Water, Energy, Environment -->
+        <div class="question">
+            <p>1️⃣ How long is your average shower?</p>
+            <button onclick="setWater('low', this)">Less than 5 minutes</button>
+            <button onclick="setWater('medium', this)">5–10 minutes</button>
+            <button onclick="setWater('high', this)">More than 10 minutes</button>
+        </div>
+        <div class="question">
+            <p>2️⃣ Do you switch off lights and devices when not in use?</p>
+            <button onclick="setEnergy('low', this)">Yes, always</button>
+            <button onclick="setEnergy('high', this)">Sometimes / No</button>
+        </div>
+        <div class="question">
+            <p>3️⃣ Do you reuse items instead of throwing them away?</p>
+            <button onclick="setEnv('low', this)">Always</button>
+            <button onclick="setEnv('medium', this)">Sometimes</button>
+            <button onclick="setEnv('high', this)">Never</button>
+        </div>
+        <div class="question">
+            <p>4️⃣ Do you unplug chargers and devices when not in use?</p>
+            <button onclick="setEnergy('low', this)">Yes, always</button>
+            <button onclick="setEnergy('high', this)">Sometimes / No</button>
+        </div>
+        <div class="question">
+            <p>5️⃣ Do you recycle paper, plastic, and metal?</p>
+            <button onclick="setEnv('low', this)">Yes, always</button>
+            <button onclick="setEnv('high', this)">Sometimes / No</button>
+        </div>
+        <div class="question">
+            <p>6️⃣ How often do you take short showers to save water?</p>
+            <button onclick="setWater('low', this)">Always</button>
+            <button onclick="setWater('medium', this)">Sometimes</button>
+            <button onclick="setWater('high', this)">Never</button>
+        </div>
+        <div class="question">
+            <p>7️⃣ Do you use energy-efficient light bulbs?</p>
+            <button onclick="setEnergy('low', this)">Yes</button>
+            <button onclick="setEnergy('high', this)">No</button>
+        </div>
+        <div class="question">
+            <p>8️⃣ Do you turn off taps while brushing teeth?</p>
+            <button onclick="setWater('low', this)">Yes</button>
+            <button onclick="setWater('high', this)">No</button>
+        </div>
+        <div class="question">
+            <p>9️⃣ Do you walk or cycle for short trips?</p>
+            <button onclick="setEnv('low', this)">Always</button>
+            <button onclick="setEnv('medium', this)">Sometimes</button>
+            <button onclick="setEnv('high', this)">Never</button>
+        </div>
+        <div class="question">
+            <p>🔟 How often do you buy single-use plastic items?</p>
+            <button onclick="setEnv('low', this)">Never</button>
+            <button onclick="setEnv('medium', this)">Sometimes</button>
+            <button onclick="setEnv('high', this)">Often</button>
+        </div>
+        <!-- 11–25 more questions: same format, covering all three topics -->
+        <!-- Add as many as you want, just increment numbers -->
+        <button id="analyzeBtn" onclick="analyze()">Analyze My Habits</button>
+        <div id="result"></div>
+    </section>
+</div>
+
+<!-- ===== LEARN SECTION ===== -->
+<div id="learnContainer" style="display:none;">
+    <section id="learn">
+        <h2>📘 Click to Learn More</h2>
+
+        <!-- Water Card -->
+        <div class="card" onclick="toggleInfo('waterInfo')">
+            💧 Water
+            <ul id="waterInfo" style="display:none;">
+                <li>A leaking tap can waste 20 liters/day</li>
+                <li>Short showers save hundreds of liters</li>
+                <li>Collect rainwater</li>
+                <li>Turn off taps while brushing</li>
+                <li>Fix leaking taps promptly</li>
+                <li>Use water-saving showerheads</li>
+                <li>Water plants in the evening</li>
+                <li>Avoid overwatering gardens</li>
+                <li>Use buckets for washing cars</li>
+                <li>Reuse water for plants</li>
+                <li>Don’t leave taps running</li>
+                <li>Install dual flush toilets</li>
+                <li>Take shorter showers</li>
+                <li>Wash vegetables in a bowl</li>
+                <li>Collect condensation water</li>
+                <li>Check for pipe leaks</li>
+                <li>Use efficient washing machines</li>
+                <li>Water lawns less frequently</li>
+                <li>Educate others on water use</li>
+                <li>Monitor daily water usage</li>
+                <li>Avoid running dishwasher half empty</li>
+                <li>Use mulch to retain soil moisture</li>
+                <li>Use water-efficient taps</li>
+                <li>Rainwater for flushing toilets</li>
+                <li>Sweep driveways instead of hosing</li>
+                <li>Avoid wasting water in pools</li>
+                <li>Check irrigation systems</li>
+                <li>Fix dripping taps</li>
+                <li>Reduce water used in laundry</li>
+                <li>Turn off water during cleaning tasks</li>
+            </ul>
+        </div>
+
+        <!-- Energy Card -->
+        <div class="card" onclick="toggleInfo('energyInfo')">
+            💡 Energy
+            <ul id="energyInfo" style="display:none;">
+                <li>Turn off unused devices</li>
+                <li>Use LED bulbs</li>
+                <li>Unplug chargers</li>
+                <li>Use natural light</li>
+                <li>Energy-efficient appliances</li>
+                <li>Set thermostat wisely</li>
+                <li>Use fans instead of AC</li>
+                <li>Close doors/windows when AC on</li>
+                <li>Avoid standby mode</li>
+                <li>Solar-powered devices</li>
+                <li>Monitor electricity usage</li>
+                <li>Timers for lights</li>
+                <li>Avoid overcharging devices</li>
+                <li>Smart plugs</li>
+                <li>Wash clothes in cold water</li>
+                <li>Line dry clothes</li>
+                <li>Reduce screen brightness</li>
+                <li>Turn off computers when not in use</li>
+                <li>Limit hot water usage</li>
+                <li>Energy-efficient windows</li>
+                <li>Insulate homes properly</li>
+                <li>Encourage community energy saving</li>
+                <li>Avoid using dryer unnecessarily</li>
+                <li>Schedule appliance use efficiently</li>
+                <li>Encourage biking/walking</li>
+                <li>Turn off lights in empty rooms</li>
+                <li>Reduce energy-intensive electronics</li>
+                <li>Use energy monitoring apps</li>
+                <li>Promote renewable energy</li>
+                <li>Educate friends and family</li>
+            </ul>
+        </div>
+
+        <!-- Environment Card -->
+        <div class="card" onclick="toggleInfo('envInfo')">
+            🌍 Environment
+            <ul id="envInfo" style="display:none;">
+                <li>Plant trees</li>
+                <li>Reduce single-use plastics</li>
+                <li>Walk/cycle short distances</li>
+                <li>Recycle paper, plastic, metals</li>
+                <li>Compost organic waste</li>
+                <li>Support eco-products</li>
+                <li>Avoid littering</li>
+                <li>Join clean-up drives</li>
+                <li>Use public transport</li>
+                <li>Buy local products</li>
+                <li>Educate peers on environment</li>
+                <li>Reduce meat consumption</li>
+                <li>Save wildlife habitats</li>
+                <li>Avoid fast fashion</li>
+                <li>Use eco-friendly packaging</li>
+                <li>Participate in tree planting</li>
+                <li>Support renewable energy</li>
+                <li>Limit car use</li>
+                <li>Conserve water</li>
+                <li>Advocate climate action</li>
+                <li>Reduce CO₂ emissions</li>
+                <li>Encourage community gardening</li>
+                <li>Use reusable shopping bags</li>
+                <li>Reduce electronic waste</li>
+                <li>Practice mindful consumption</li>
+                <li>Share eco-tips online</li>
+                <li>Volunteer for environmental causes</li>
+                <li>Encourage sustainable schools</li>
+                <li>Support recycling initiatives</li>
+                <li>Protect biodiversity</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<!-- ===== IDEAS SECTION ===== -->
+<div id="ideasContainer" style="display:none;">
+    <section id="ideas">
+        <h2>💡 Ideas to Promote Sustainability</h2>
+        <button onclick="nextIdea()">Show Me an Idea</button>
+        <p id="ideaText" class="idea-text"></p>
+    </section>
+</div>
+
+<!-- ===== GOALS SECTION ===== -->
+<div id="goalsContainer" style="display:none;">
+    <section id="goals">
+        <h2>🎯 Goals of EcoMirror AI</h2>
+        <ul>
+            <li>Help users understand their daily impact on the environment.</li>
+            <li>Encourage small, achievable eco-friendly habits.</li>
+            <li>Provide an interactive, educational experience.</li>
+            <li>Promote awareness about water, energy, and CO₂ reduction.</li>
+            <li>Support sustainability education in a fun way.</li>
+            <li>Inspire users to share eco-tips with friends.</li>
+            <li>Encourage recycling at home and school.</li>
+            <li>Promote planting trees and gardening.</li>
+            <li>Highlight renewable energy benefits.</li>
+            <li>Encourage reduction of single-use plastics.</li>
+            <li>Foster creative eco-projects for schools.</li>
+            <li>Motivate tracking energy usage.</li>
+            <li>Support water conservation habits.</li>
+            <li>Encourage eco-friendly transport.</li>
+            <li>Raise awareness about climate change impact.</li>
+        </ul>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
